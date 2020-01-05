@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+      
+   <TextView
+      android:id="@+id/text_result"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_gravity="left"
+      android:paddingTop="95px"
+      android:paddingLeft="19px"
+      android:paddingRight="19px"
+      android:text="@string/new_chatmsg"
+      android:background="@drawable/sim_absent_bg"
+      android:gravity="left"
+      android:textColor="#FFf0f0f0"
+      android:textSize="24px" />
+
+    <ImageView
+        android:id="@+id/confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+	android:layout_gravity="bottom|center"
+        android:background="@drawable/confirm"
+	/>
+
+</FrameLayout>

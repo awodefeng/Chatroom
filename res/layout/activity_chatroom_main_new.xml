@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:cp="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_chatroom_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color">
+    tools:context="com.xxun.watch.xunchatroom.activity.ChatroomMainActivity">
+
+
+    <GridView
+      android:id="@+id/chat_func_grid"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:numColumns="2"
+      android:columnWidth="75dp"
+      android:layout_marginTop="5dp"
+      android:layout_alignParentTop="true"
+      />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/chatroom_grid_btn"
+        android:layout_alignParentBottom="true"
+        android:background="@mipmap/cancel_up"
+	android:layout_centerHorizontal="true"
+	android:layout_centerVertical="true"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/chatroom_rec_btn"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/rec_btn_up"
+	android:layout_marginBottom="10dp"
+
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/chatroom_face_btn"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/more"
+        android:layout_toRightOf="@+id/chatroom_rec_btn"
+	android:layout_marginBottom="10dp"
+	
+        />
+    <com.xxun.watch.xunchatroom.activity.ChatGifView
+        android:id="@+id/gif_recording"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center_horizontal"
+        android:enabled="false"
+        android:layout_above="@+id/chatroom_rec_btn"
+        android:layout_alignParentTop="true"
+        />
+
+    <com.xxun.watch.xunchatroom.activity.CircleProgressBar
+        android:id="@+id/pb_gif"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        cp:radius="80dp"
+        cp:strokeWidth="20dp"
+        cp:ringColor="#00ff00"
+        cp:textColor="#ffffff"
+        android:layout_above="@+id/chatroom_rec_btn"
+        android:layout_alignParentTop="true"
+        />
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@null"
+        android:id="@+id/chatroom_lv"
+        android:layout_above="@+id/chatroom_rec_btn"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="20dp"
+	android:scrollbars="none"
+    />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/empty_chat"
+        android:textColor="@color/content_text_color"
+        android:textSize="28sp"
+	android:text="@string/empty_list"
+	android:layout_centerHorizontal="true"
+	android:layout_centerVertical="true"
+	android:gravity="center"
+        />
+
+</RelativeLayout>

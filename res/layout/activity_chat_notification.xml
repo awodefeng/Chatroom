@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_chat_notification"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/bg_color">
+    tools:context="com.xxun.watch.xunchatroom.activity.ChatNotificationActivity">
+
+
+    <ImageView
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:id="@+id/notif_photo_img"
+        android:layout_alignParentLeft="true"
+	android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/notif_title_tv"
+        android:layout_toRightOf="@+id/notif_photo_img"
+        android:textColor="@color/content_text_color"
+        android:textSize="28sp"
+	android:layout_marginTop="10dp"
+        />
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/notif_peer_bg"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/notif_photo_img"
+	android:layout_marginTop="20dp"
+	android:scaleType="fitXY"
+	android:adjustViewBounds="true"
+        />
+
+    <TextView
+        android:layout_width="170dp"
+        android:layout_height="70dp"
+        android:id="@+id/notif_content_tv"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/notif_photo_img"
+        android:textColor="@color/list_text_color"
+        android:textSize="28sp"
+        android:layout_marginTop="22dp"
+        android:layout_marginLeft="16dp"
+	android:maxEms="10"
+	android:ellipsize="end"
+	android:gravity="center_vertical|left"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/notif_content_iv"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/notif_photo_img"
+        android:layout_marginTop="32dp"
+        android:layout_marginLeft="6dp"
+        />
+
+    <com.xxun.watch.xunchatroom.activity.ChatGifView
+        android:id="@+id/gif_play_notice"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="center_horizontal"
+        android:enabled="false"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/notif_photo_img"
+        android:layout_marginTop="46dp"
+        android:layout_marginLeft="56dp"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/notif_unread_img"
+        android:layout_below="@+id/notif_photo_img"
+        android:layout_toRightOf="@+id/notif_peer_bg"
+	android:layout_marginTop="20dp"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/notif_enter_btn"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/enter_up"
+	android:layout_marginLeft="0dp"
+	android:layout_marginRight="0dp"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/notif_cancel_btn"
+        android:layout_toRightOf="@+id/notif_enter_btn"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/close_up"
+	android:layout_marginLeft="0dp"
+	android:layout_marginRight="0dp"
+        />
+</RelativeLayout>

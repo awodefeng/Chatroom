@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_list_view_local"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="8dp"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="8dp"
+    android:background="@color/bg_color"
+    android:minHeight="100px"
+    tools:context="com.xxun.watch.xunchatroom.activity.ChatroomMainNewActivity">
+
+    <ImageView
+        android:id="@+id/local_img_send_id"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+	android:layout_marginLeft="10dp"
+	android:focusable="false"
+	android:scaleType="fitXY"
+	android:adjustViewBounds="true"
+        />
+
+
+    <ImageView
+        android:id="@+id/local_face_img_id"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginLeft="150dp"
+        />
+
+    <com.xxun.watch.xunchatroom.activity.ChatGifView
+        android:id="@+id/local_load_img_id"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginLeft="150dp"
+        android:layout_gravity="center_horizontal"
+        android:enabled="false"
+    />
+
+</RelativeLayout>
+

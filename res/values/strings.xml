@@ -1,0 +1,25 @@
+﻿<resources>
+    <string name="app_name">语音聊天</string>
+    <string name="family_group">家庭组</string>
+    <string name="record_time_short">录音时间太短</string>
+    <string name="face_key_1">cry</string>
+    <string name="face_key_2">snot</string>
+    <string name="face_key_3">nose</string>
+    <string name="face_key_4">naughty</string>
+    <string name="face_key_5">smile</string>
+    <string name="face_key_6">flower</string>
+    <string name="face_key_7">laugh</string>
+    <string name="face_key_8">moon</string>
+    <string name="face_key_9">basketball</string>
+    <string name="sms_group">短信息</string>
+    <string name="empty_list">没有新消息哦！</string>
+    <string name="record_cancel">录音已取消</string>
+    <string name="temp_high">温度过高，请先降低手表温度</string>
+    <string name="check_net">请检查手表网络状况</string>
+    <string name="charge_tips">充电中，请移除充电器后使用</string>
+    <string name="new_chatmsg">有新的语音消息,请拔出充电器后查看</string>
+    <string name="new_photo">新照片</string>
+    <string name="new_video">新视频</string>
+    <string name="load_data">资源载入中，请稍候</string>
+    <string name="bg_record_tips">正在远程录音</string>
+</resources>

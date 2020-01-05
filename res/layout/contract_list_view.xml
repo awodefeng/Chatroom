@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/contract_list_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:padding="10dp"
+    android:divider="@null"
+    android:minHeight="100dp"
+    tools:context="com.xxun.watch.xunchatroom.activity.ContractListActivity">
+
+    <ImageView
+        android:id="@+id/photo_img"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+	android:layout_marginTop="1dp"
+        />
+
+    <ImageView
+        android:id="@+id/count_img"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="1dp"
+        android:layout_marginLeft="60dp"
+	android:scaleType="fitXY"
+	android:adjustViewBounds="true"
+	android:gravity="center_vertical|left"
+        />
+
+
+<com.xxun.watch.xunchatroom.activity.FoucusTextView
+        android:id="@+id/name_tv"
+        android:layout_width="match_parent"
+        android:layout_height="60sp"
+        android:textSize="50sp"
+        android:textColor="@color/contract_text_color"
+        android:layout_toRightOf="@+id/photo_img"
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="10dp"
+        android:gravity="center_vertical"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"  />
+
+</RelativeLayout>

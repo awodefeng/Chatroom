@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.xxun.watch.xunchatroom"
+    coreApp="true"
+
+    android:sharedUserId="android.uid.system">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.WRITE_SMS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission> 
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS"></uses-permission> 
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"></uses-permission> 	
+
+    <application
+	android:persistent="true"
+        android:allowBackup="true"
+        android:icon="@mipmap/main_icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+	android:hardwareAccelerated="false"
+	android:theme="@style/MySwapDimissTheme">
+
+
+
+
+        <activity android:name="com.xxun.watch.xunchatroom.activity.ContractListActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.xxun.watch.xunchatroom.activity.ChatroomMainActivity"
+            android:theme="@style/NoSwapDimissTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.xxun.watch.xunchatroom.activity.ChatroomMainNewActivity"
+            android:theme="@style/NoSwapDimissTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.xxun.watch.xunchatroom.activity.ChatFaceActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.xxun.watch.xunchatroom.activity.ChatTextContentActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+	
+	<activity
+            android:name="com.xxun.watch.xunchatroom.activity.NewChatMsgAlertActivity"
+            android:launchMode="singleInstance">
+        </activity>
+
+        <activity android:name="com.xxun.watch.xunchatroom.activity.ChatNotificationActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.xxun.watch.xunchatroom.activity.ChatSmsActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.xxun.watch.xunchatroom.activity.VideoDisplayActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.xxun.watch.xunchatroom.activity.PhotoDisplayActivity"
+            android:theme="@style/NoSwapDimissTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <service android:name="com.xiaoxun.sdk.service.XiaoXunNetService"
+            android:enabled="true"
+            android:exported="false"/>
+
+        <receiver android:name="com.xxun.watch.xunchatroom.SMS.SMSReciever" >
+            <intent-filter android:priority="2147483647">
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name="com.xxun.watch.xunchatroom.broadcast.ChatNewMsgBroadcastReceiver">
+            .            <intent-filter >
+                           <action android:name="com.broadcast.xxun.newMessage"/>
+                       </intent-filter>
+        </receiver>
+
+        <receiver android:name="com.xxun.watch.xunchatroom.broadcast.ChatSearchMsgBroadcastReceiver">
+          <intent-filter >
+            <action android:name="com.broadcast.xxun.searchMessage"/>
+        </intent-filter>
+        </receiver>
+        <receiver android:name="com.xxun.watch.xunchatroom.broadcast.RecieveMessageBroadcastReceiver">
+            .            <intent-filter >
+                           <action android:name="com.broadcast.xxun.RecieveMessage"/>
+                       </intent-filter>
+        </receiver>
+        <receiver android:name="com.xxun.watch.xunchatroom.broadcast.LoginOKBroadcastReceiver">
+            .            <intent-filter >
+                           <action android:name="com.xiaoxun.sdk.action.LOGIN_OK"/>
+                       </intent-filter>
+        </receiver>
+        <receiver android:name="com.xxun.watch.xunchatroom.broadcast.SessionOKBroadcastReceiver">
+            .            <intent-filter >
+                           <action android:name="com.xiaoxun.sdk.action.SESSION_OK"/>
+                       </intent-filter>
+        </receiver>
+        <receiver android:name="com.xxun.watch.xunchatroom.broadcast.BindSuccBroadcastReceiver">
+            .            <intent-filter >
+                           <action android:name="com.xunlauncher.bindsuccess"/>
+                       </intent-filter>
+        </receiver>
+        <receiver android:name="com.xxun.watch.xunchatroom.broadcast.ChatBootupBroadcastReceiver">
+            .            <intent-filter >
+                           <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                       </intent-filter>
+        </receiver>
+
+        <receiver android:name="com.xxun.watch.xunchatroom.broadcast.UnBindBroadcastReceiver">
+            .            <intent-filter >
+                           <action android:name="com.xunlauncher.unbindrequest"/>
+                       </intent-filter>
+        </receiver>
+	<receiver android:name="com.xxun.watch.xunchatroom.broadcast.WatchCallBroadcastReceiver"> 
+	<intent-filter> 
+	<action android:name="android.intent.action.PHONE_STATE"/> 
+	<action android:name="android.intent.action.NEW_OUTGOING_CALL" /> 
+	</intent-filter> 
+	</receiver> 
+        <receiver android:name="com.xxun.watch.xunchatroom.broadcast.BgRecordBroadcastReceiver">
+            .            <intent-filter >
+                           <action android:name="com.xunchatroom.bgRecord"/>
+			   <action android:name="com.xunchatroom.stopBgRecord"/>
+                       </intent-filter>
+        </receiver>
+        <receiver android:name="com.xxun.watch.xunchatroom.broadcast.VedioRecordBroadCastReciever">
+            .            <intent-filter >
+                           <action android:name="com.xxun.xuncamera.quitrecord"/>
+                       </intent-filter>
+        </receiver>
+        <receiver android:name="com.xxun.watch.xunchatroom.broadcast.BalanceInquiryBroadcastReceiver">
+            .            <intent-filter >
+                           <action android:name="com.xunchatroom.balanceinquiry"/>
+                       </intent-filter>
+        </receiver>
+        <receiver android:name="com.xxun.watch.xunchatroom.broadcast.DownloadReceiver">
+            .            <intent-filter >
+                           <action android:name="android.intent.action.DOWNLOAD_COMPLETE"/>
+                       </intent-filter>
+        </receiver>
+	<service android:name="com.xxun.watch.xunchatroom.service.ChatroomService" >  
+           <intent-filter android:priority="1000">  
+               <action android:name="com.xxun.watch.xunchatroom.service.StartChatService" />  
+ 
+               <category android:name="android.intent.category.default" />  
+           </intent-filter>  
+       </service> 
+	<service android:name="com.xxun.watch.xunchatroom.service.SendDataService" >  
+           <intent-filter android:priority="1000">  
+               <action android:name="com.xxun.watch.xunchatroom.service.SendDataService" />  
+ 
+               <category android:name="android.intent.category.default" />  
+           </intent-filter>  
+       </service>   
+	<service android:name="com.xxun.watch.xunchatroom.service.RecieverDataService" >  
+           <intent-filter android:priority="1000">  
+               <action android:name="com.xxun.watch.xunchatroom.service.SendDataService" />  
+ 
+               <category android:name="android.intent.category.default" />  
+           </intent-filter>  
+       </service>   
+    </application>
+
+</manifest>

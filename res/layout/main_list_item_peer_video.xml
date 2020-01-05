@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_list_view_peer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="8dp"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="8dp"
+    android:background="@color/bg_color"
+    android:minHeight="100px"
+    tools:context="com.xxun.watch.xunchatroom.activity.ChatroomMainNewActivity">
+
+    <TextView
+        android:id="@+id/peer_name_tv_id"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:textSize="24sp"
+        android:textColor="@color/list_name_color"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="16dp"
+	android:gravity="center_vertical|left"
+        />
+
+    <ImageView
+        android:id="@+id/peer_face_img_id"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/peer_name_tv_id"
+        android:layout_marginTop="14dp"
+        android:layout_marginLeft="16dp"
+        />
+
+    <com.xxun.watch.xunchatroom.activity.ChatGifView
+        android:id="@+id/peer_load_img_id"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/peer_name_tv_id"
+        android:layout_marginTop="14dp"
+        android:layout_marginLeft="16dp"
+        android:layout_gravity="center_horizontal"
+        android:enabled="false"
+    />
+
+    <ImageView
+        android:id="@+id/peer_play_img_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/peer_name_tv_id"
+        android:layout_marginTop="14dp"
+        android:layout_marginLeft="16dp"
+        />
+</RelativeLayout>
